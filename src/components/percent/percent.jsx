@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import {randColor} from "../randColor";
+
 import { BlockList,BlockItem,LabelName,LabelPercent, } from "./percent.styled"
 export const PercentBlock = ({statistic})=>{
     return(
@@ -16,11 +18,7 @@ export const PercentBlock = ({statistic})=>{
     })}
         </BlockList>)};
 
-const randColor = () =>  {
-    const color = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
-    return color;
 
-}
 PercentBlock.prototype ={
     statistic: PropTypes.arrayOf(
         PropTypes.shape({
