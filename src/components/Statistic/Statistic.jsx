@@ -1,12 +1,11 @@
 import PropTypes from "prop-types";
 import {randColor} from "../randColor";
-
-import { BlockList,BlockItem,LabelName,LabelPercent, } from "./percent.styled"
-export const PercentBlock = ({statistic})=>{
-    return(
-
-    <BlockList>
-    {statistic.map(stat =>{
+import {StatSection,BlockList,BlockItem,LabelName,LabelPercent,Title} from "./Statistic.styled";
+export const Statistic = ({stats,title}) =>{
+    return (<StatSection>
+        {title &&(<Title>{title}</Title>)}
+     <BlockList>
+    {stats.map(stat =>{
         const bgStyles = {
             backgroundColor: `${randColor()}`
         }
@@ -16,15 +15,24 @@ export const PercentBlock = ({statistic})=>{
       </BlockItem>
          
     })}
-        </BlockList>)};
+        </BlockList>
+        </StatSection>)
+}
 
-
-PercentBlock.prototype ={
+Statistic.propTypes ={ 
     statistic: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
-            label: PropTypes.string.isRequired,
-            percentage: PropTypes.number.isRequired
-        })
+            label:PropTypes.string.isRequired, 
+            percentage: PropTypes.number.isRequired,
+        }.isRequired)
     )
 }
+
+
+
+
+
+
+
+

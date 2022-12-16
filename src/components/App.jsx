@@ -1,6 +1,6 @@
 import {Profile} from './Profile/Profile';
-import { Stats } from './stats/stats';
-import { FriendsList } from './friendsList/friendsList';
+import { Statistic } from './Statistic/Statistic';
+import { FriendsList } from './FriendsList/FriendsList';
 import { TransactionHistory } from './transactionHistory/transactionHistory';
 import user from '../data/user'
 import stats from "../data/data";
@@ -15,7 +15,7 @@ export const App = () => {
       location={user.location}
       avatar={user.avatar}
       stats={user.stats}/>
-    <Stats statistic={stats}/>
+    <Statistic stats ={stats} title = {"Upload Stats"}/>
     <FriendsList friends = {friends}/>
     <TransactionHistory transaction = {transaction}/>
     </div>
