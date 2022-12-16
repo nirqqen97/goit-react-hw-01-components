@@ -7,7 +7,6 @@ export const FriendsList =({friends}) =>{
         {friends.map(friend =>
          <FriendsItem key={friend.id} friend = {friend}></FriendsItem>
             )}
-       
     </FrList>
 }
 
@@ -19,7 +18,7 @@ FriendsList.propTypes = {
             name: PropTypes.string.isRequired,
             isOnline: PropTypes.bool.isRequired,
             id: PropTypes.number.isRequired
-        })
+        }).isRequired
     )
 }
 
