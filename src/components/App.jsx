@@ -1,7 +1,7 @@
 import {Profile} from './Profile/Profile';
 import { Statistic } from './Statistic/Statistic';
 import { FriendsList } from './FriendsList/FriendsList';
-import { TransactionHistory } from './transactionHistory/transactionHistory';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import user from '../data/user'
 import stats from "../data/data";
 import friends from '../data/friends';
