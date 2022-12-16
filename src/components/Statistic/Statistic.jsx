@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import {randColor} from "../randColor";
-import {StatSection,BlockList,BlockItem,LabelName,LabelPercent} from "./Statistic.styled";
-export const Statistic = ({stats}) =>{
+import {StatSection,BlockList,BlockItem,LabelName,LabelPercent,Title} from "./Statistic.styled";
+export const Statistic = ({stats,title}) =>{
     return (<StatSection>
+        {title && (<Title>{title}</Title>)}
      <BlockList>
     {stats.map(stat =>{
         const bgStyles = {
